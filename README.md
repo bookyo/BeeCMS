@@ -3,7 +3,7 @@
 技术栈：Graphql，mongodb，nodejs，vuetify，nuxtjs，expressjs，redis。
 
 - 官网：https://www.iqi360.com/p/BeeCMS
-- 演示站：https://beefun.cc
+- 演示站：https://beefun.cc    https://yize-ad.com
 
 功能介绍：
 - 一、四大内容模块：视频、小说/教程、图集/漫画、自媒体，可独立使用其中一个或多个模块。
