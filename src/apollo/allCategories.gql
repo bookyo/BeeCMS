@@ -1,0 +1,6 @@
+{
+    allCategories(first: 8) {
+        name,
+        id
+    }
+}

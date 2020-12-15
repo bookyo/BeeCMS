@@ -1,0 +1,117 @@
+.theme--dark.v-navigation-drawer {
+    background-color: #1E1E1E;
+}
+a {
+    text-decoration: none;
+}
+.v-card__text pre {
+    line-height: 1.4;
+    padding: 1.25rem 1.5rem;
+    margin: .85rem 0;
+    background-color: #282c34;
+    border-radius: 6px;
+    overflow: auto;
+}
+.v-card__text pre code {
+    font-weight: 400;
+    margin: 0;
+    font-size: .85em;
+    color: #fff; /* #fff */
+    padding: 0;
+    background-color: transparent;
+    border-radius: 0;
+    box-shadow: none;
+}
+.v-card__text pre code:after, .v-card__text pre code:before {
+    content: "";
+}
+.v-card__text p {
+    color:#F5F5F5;
+    /* color: hsla(0,0%,100%,.85); */
+}
+.v-card__text p img {
+    max-width: 100%;
+}
+.v-card__text h1 {
+    font-size: 1.25rem !important;
+    font-weight: 500;
+    line-height: 2rem;
+    letter-spacing: 0.0125em !important;
+    margin-bottom: 12px;
+    color:#fff;
+}
+.v-card__text h2,.v-card__text h3,.v-card__text h4 {
+    font-size: 1rem !important;
+    font-weight: 400;
+    letter-spacing: 0.009375em !important;
+    line-height: 1.75rem;
+    color:#fff;
+    margin-bottom:12px;
+}
+.v-card__text h2 {
+    font-size: 1.125rem !important;
+}
+.v-card__text blockquote {
+    padding: 16px 0 16px 24px;
+    font-size: .875rem;
+    font-weight: 400;
+    border-left:#2196f3 solid 4px;
+    margin-bottom: 16px;
+}
+.v-card__text blockquote p {
+    margin:0;
+}
+.v-card__text hr {
+    display: block;
+    flex: 1 1 0px;
+    max-width: 100%;
+    height: 0;
+    max-height: 0;
+    border: solid;
+    border-width: thin 0 0;
+    transition: inherit;
+    border-color: hsla(0,0%,100%,.12);
+    margin-bottom: 16px;
+}
+.v-card__subtitle, .v-card__text {
+    font-size: .875rem;
+    font-weight: 400;
+    line-height: 1.375rem;
+    letter-spacing: .0071428571em;
+}
+.caption1 {
+font-weight: 400;
+line-height: 1.25rem;
+font-size: 0.75rem;
+}
+.v-card__title h1 {
+    font-size: 1.25rem;
+    font-weight: 500;
+}
+.v-application .webkit-line2 {
+    display: -webkit-box!important;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    word-wrap: break-word!important;
+    word-break: break-word!important;
+    white-space: normal!important;
+    overflow: hidden!important;
+    -o-text-overflow: ellipsis!important;
+    text-overflow: ellipsis!important;
+}
+.v-application .right-title {
+    display: block;
+    font-size: 0.9rem!important;
+    font-weight: 400;
+    line-height: 1.1rem;
+    letter-spacing: .009375em!important;
+}
+.order-warning {
+    border-radius: 4px;
+    border:1px dashed rgba(255, 255, 255, 0.12);
+    padding: 15px;
+    text-align: center;
+}
+.chapters-wrapper .v-slide-group__wrapper {
+    touch-action: unset;
+}

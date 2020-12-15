@@ -1,0 +1,5 @@
+node_modules
+dist
+dump.rdb
+yarn.lock
+.env
