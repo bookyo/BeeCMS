@@ -335,13 +335,13 @@ export default {
       // FilePond instance methods are available on `this.$refs.pond`
     },
     async addVideo() {
-      this.loading = true;
       const client = this.$apollo.getClient();
       if (!this.finishUplaod) {
         this.$notify.toast("请等待视频上传完成！");
         return;
       }
       if (this.$refs.form.validate()) {
+        this.loading = true;
         const user = this.$store.state.authUser;
         try {
           const response = await client.mutate({

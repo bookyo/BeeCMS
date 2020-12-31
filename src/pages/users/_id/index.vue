@@ -18,12 +18,24 @@
               <div class="d-flex mt-3">
                 <div class="d-flex flex-column align-center">
                   <div>粉丝</div>
-                  <div class="text--secondary">{{ followTo.count }}</div>
+                  <div class="text--secondary">
+                    {{
+                      followTo.count > 1000
+                        ? (followTo.count / 1000).toFixed(2) + "k"
+                        : followTo.count
+                    }}
+                  </div>
                 </div>
                 <v-divider class="mx-5" vertical />
                 <div class="d-flex flex-column align-center">
                   <div>关注</div>
-                  <div class="text--secondary">{{ followBy.count }}</div>
+                  <div class="text--secondary">
+                    {{
+                      followBy.count > 1000
+                        ? (followBy.count / 1000).toFixed(2) + "k"
+                        : followBy.count
+                    }}
+                  </div>
                 </div>
                 <v-divider class="mx-5" vertical />
                 <div class="d-flex flex-column align-center">
@@ -31,7 +43,7 @@
                   <div class="text--secondary">
                     {{
                       user.score > 1000
-                        ? parseInt(user.score / 1000) + "k"
+                        ? (user.score / 1000).toFixed(2) + "k"
                         : user.score
                     }}
                   </div>
@@ -282,6 +294,10 @@ export default {
       };
     } catch (err) {
       console.log(err);
+      return error({
+        message: err.message,
+        status: 404,
+      });
     }
   },
   components: {
@@ -308,14 +324,15 @@ export default {
             }
           }
         `,
-        variables: {score: exchange.score, 
-          name: exchange.name, 
+        variables: {
+          score: exchange.score * 1,
+          name: exchange.name,
           account: exchange.account,
           type: exchange.type.value,
-          branch: branch.length ? branch : null
-        }
+          branch: branch.length ? branch : null,
+        },
       });
-      this.$notify.toast('恭喜您，申请提现成功！');
+      this.$notify.toast("恭喜您，申请提现成功！");
       this.dialog = false;
     },
   },

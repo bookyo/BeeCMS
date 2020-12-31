@@ -358,7 +358,6 @@ export default {
       // FilePond instance methods are available on `this.$refs.pond`
     },
     async addbee() {
-      this.loading = true;
       const file = this.$refs.pond.getFile();
       let imageId = null;
       if (file) {
@@ -374,6 +373,7 @@ export default {
           this.$notify.toast("请上传封面！");
           return;
         }
+        this.loading = true;
         const user = this.$store.state.authUser;
         try {
           const response = await client.mutate({

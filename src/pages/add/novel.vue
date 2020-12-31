@@ -329,7 +329,6 @@ export default {
       // FilePond instance methods are available on `this.$refs.pond`
     },
     async addNovel() {
-      this.loading = true;
       const file = this.$refs.pond.getFile();
       let imageId = null;
       console.log(file);
@@ -346,6 +345,7 @@ export default {
           this.$notify.toast("内容不能少于5个字！");
           return;
         }
+        this.loading = true;
         const user = this.$store.state.authUser;
         try {
           const response = await client.mutate({
